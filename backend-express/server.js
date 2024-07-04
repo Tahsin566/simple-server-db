@@ -13,6 +13,11 @@ app.use(express.json())
 let arr = ['Tahsin','Tuhin','Badar','Dip','Apu','Najibur']
 
 
+app.get('/', (req, res) => {
+    
+    res.send('This is an express server with database for testing.It has /get for get request and /post for post request')
+});
+
 app.get('/get', (req, res) => {
     
     User.find().then(todo => res.json(todo)
